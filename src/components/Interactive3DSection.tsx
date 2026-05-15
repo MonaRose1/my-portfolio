@@ -54,7 +54,7 @@ export const Interactive3DSection: React.FC = () => {
   const startTimeRef = useRef(performance.now());
 
   const [shape, setShape] = useState('torusKnot');
-  const [color, setColor] = useState('#6366f1');
+  const [color, setColor] = useState('#ffffff');
   const [wireframe, setWireframe] = useState(true);
   const [distort, setDistort] = useState(0.4);
   const [speed, setSpeed] = useState(1);
@@ -103,7 +103,7 @@ export const Interactive3DSection: React.FC = () => {
     // Main mesh with premium shining material
     const geometry = createGeometry('torusKnot');
     const material = new THREE.MeshPhysicalMaterial({
-      color: new THREE.Color('#6366f1'),
+      color: new THREE.Color('#ffffff'),
       metalness: 0.9,
       roughness: 0.05,
       clearcoat: 1.0,
@@ -312,7 +312,7 @@ export const Interactive3DSection: React.FC = () => {
 
   const resetToDefault = () => {
     setShape('torusKnot');
-    setColor('#6366f1');
+    setColor('#ffffff');
     setWireframe(true);
     setDistort(0.4);
     setSpeed(1);

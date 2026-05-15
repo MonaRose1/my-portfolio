@@ -64,12 +64,11 @@ export const Footer: React.FC = () => {
           {/* Brand */}
           <div className="space-y-4">
             <a href="#home" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-violet-500 to-cyan-500 flex items-center justify-center transform group-hover:scale-110 transition-transform">
-                <span className="text-white font-bold text-sm">M</span>
-              </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
-                Mona<span className="text-white">.Dev</span>
-              </span>
+              <img 
+                src="/logo.png" 
+                alt="Mona.Dev Logo" 
+                className="h-10 w-auto transform group-hover:scale-105 transition-transform duration-300"
+              />
             </a>
             <p className="text-slate-400 text-sm max-w-xs">
               Full Stack Developer & ML Engineer crafting intelligent web applications 
@@ -141,7 +140,7 @@ export const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-violet-400 hover:text-violet-300 transition-colors text-sm"
                 >
-                  View Portfolio →
+                  View Old Portfolio →
                 </a>
               </div>
             </div>
@@ -154,7 +153,7 @@ export const Footer: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-slate-500 text-sm flex items-center gap-1">
-              © {currentYear} Mona.Dev. Crafted with
+              © {currentYear} Mona.Devdizayn. Crafted with
               <Heart className="w-4 h-4 text-rose-500 inline mx-1" />
               in Pakistan
             </p>

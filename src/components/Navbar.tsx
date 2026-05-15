@@ -19,6 +19,7 @@ export const Navbar: React.FC = () => {
     { name: '3D Lab', href: '#3d-lab' },
     { name: 'Skills', href: '#skills' },
     { name: 'Experience', href: '#experience' },
+    { name: 'Certifications', href: '#certifications' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -34,12 +35,11 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <a href="#home" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-violet-500 to-cyan-500 flex items-center justify-center transform group-hover:scale-110 transition-transform">
-              <span className="text-white font-bold text-sm">M</span>
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
-              Mona<span className="text-white">.Dev</span>
-            </span>
+            <img 
+              src="/logo.png" 
+              alt="Mona.Dev Logo" 
+              className="h-10 w-auto transform group-hover:scale-105 transition-transform duration-300"
+            />
           </a>
 
           {/* Desktop Navigation */}

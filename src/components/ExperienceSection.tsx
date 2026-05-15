@@ -17,19 +17,32 @@ interface Experience {
 export const ExperienceSection: React.FC = () => {
   const experiences: Experience[] = [
     {
+      title: 'Full Stack Developer & AI Automation Engineer',
+      company: 'Freelance (Collaboration with Hanzla Bin Shakeel)',
+      location: 'Remote',
+      period: 'Apr 2026 - Present',
+      description: [
+        'Partnering with university senior on high-impact full-stack and AI automation projects',
+        'Designing and implementing intelligent automation workflows and scalable web architectures',
+        'Focusing on cutting-edge AI integration and efficient system orchestration',
+      ],
+      technologies: ['React.js', 'Node.js', 'AI Automation', 'n8n', 'Python', 'LangChain'],
+      type: 'freelance',
+      current: true,
+    },
+    {
       title: 'MERN Stack Developer',
       company: 'Meta Binaire',
       location: 'Islamabad, Pakistan · Hybrid',
-      period: 'Dec 2025 - Present',
+      period: 'Dec 2025 - Mar 2026',
       description: [
         'Built scalable web apps with MongoDB, Express, React, and Node.js',
         'Designed RESTful APIs and collaborated with cross-functional teams',
         'Developed responsive and performant front-end interfaces using React.js',
-        'Working on full-stack features and contributing to production-level code',
+        'Worked on full-stack features and contributed to production-level code',
       ],
       technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'Git'],
       type: 'fulltime',
-      current: true,
     },
     {
       title: 'COO & Graphic Designer',
@@ -90,6 +103,31 @@ export const ExperienceSection: React.FC = () => {
       technologies: ['Software Development', 'Bug Fixing', 'Code Review', 'Agile'],
       type: 'simulation',
     },
+    {
+      title: 'Lead Designer & Social Media Content Manager',
+      company: 'We Make Designs For',
+      location: 'Remote',
+      period: '2024 - 2025',
+      description: [
+        'Created and managed content for social media, web banners, and promo ads',
+        'Designed major visuals for brands like "Complex Care Concepts" and "Bella Construction"',
+      ],
+      technologies: ['Graphic Design', 'Social Media Management', 'Content Creation', 'Branding'],
+      type: 'fulltime',
+    },
+    {
+      title: 'Freelance Graphic Designer',
+      company: 'HM4Designs (Partnership)',
+      location: 'Remote',
+      period: '2022 - 2025',
+      description: [
+        'Led creative direction for branding, book designs, and marketing materials',
+        'Delivered impactful visual identities aligned with client vision',
+        'Developed UI/UX and website designs integrated with custom coding',
+      ],
+      technologies: ['Graphic Design', 'UI/UX Design', 'Web Design', 'Coding', 'Branding'],
+      type: 'freelance',
+    },
   ];
 
   const getTypeBadge = (type: string, current?: boolean) => {
@@ -149,9 +187,9 @@ export const ExperienceSection: React.FC = () => {
         <div className="absolute top-1/2 right-0 w-72 h-72 bg-pink-500/5 rounded-full filter blur-3xl" />
       </div>
 
-      <SectionWrapper className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <SectionWrapper className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-slate-800/50 border border-slate-700/50 rounded-full text-sm text-slate-400 mb-4">
             <Briefcase className="w-4 h-4 text-violet-400" />
             Career Journey
@@ -164,7 +202,7 @@ export const ExperienceSection: React.FC = () => {
           <p className="text-slate-400 max-w-2xl mx-auto">
             From internships to full-time roles — building real-world products and leading teams
           </p>
-        </div>
+        </SectionWrapper>
 
         {/* Timeline */}
         <div className="relative">
@@ -176,8 +214,9 @@ export const ExperienceSection: React.FC = () => {
             const isLeft = idx % 2 === 0;
 
             return (
-              <div
+              <SectionWrapper
                 key={idx}
+                delay={idx * 0.1}
                 className={`relative mb-12 md:mb-16 ${
                   isLeft ? 'md:pr-[50%] md:text-right' : 'md:pl-[50%] md:ml-auto'
                 }`}
@@ -261,18 +300,17 @@ export const ExperienceSection: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </SectionWrapper>
             );
           })}
         </div>
 
-        {/* Stats bar */}
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <SectionWrapper className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { label: 'Companies', value: '4+', icon: '🏢' },
-            { label: 'Roles Held', value: '6+', icon: '👩‍💻' },
-            { label: 'Months Experience', value: '12+', icon: '📅' },
-            { label: 'Skills Applied', value: '15+', icon: '⚡' },
+            { label: 'Companies', value: '8+', icon: '🏢' },
+            { label: 'Roles Held', value: '9+', icon: '👩‍💻' },
+            { label: 'Months Experience', value: '36+', icon: '📅' },
+            { label: 'Skills Applied', value: '30+', icon: '⚡' },
           ].map((stat, i) => (
             <div key={i} className="bg-slate-900/40 border border-slate-800/50 rounded-xl p-4 text-center hover:border-violet-500/30 transition-colors">
               <div className="text-2xl mb-1">{stat.icon}</div>
@@ -280,10 +318,10 @@ export const ExperienceSection: React.FC = () => {
               <div className="text-xs text-slate-500">{stat.label}</div>
             </div>
           ))}
-        </div>
+        </SectionWrapper>
 
         {/* Currently seeking */}
-        <div className="mt-12 text-center">
+        <SectionWrapper className="mt-12 text-center">
           <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-violet-500/10 to-cyan-500/10 border border-violet-500/20 rounded-full">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -292,8 +330,8 @@ export const ExperienceSection: React.FC = () => {
             <span className="text-slate-300">Open to full-time roles & exciting collaborations</span>
             <Sparkles className="w-4 h-4 text-violet-400" />
           </div>
-        </div>
-      </SectionWrapper>
+        </SectionWrapper>
+      </div>
     </section>
   );
 };

@@ -5,6 +5,7 @@ import { AboutSection } from './components/AboutSection';
 import { Interactive3DSection } from './components/Interactive3DSection';
 import { SkillsSection } from './components/SkillsSection';
 import { ExperienceSection } from './components/ExperienceSection';
+import { CertificationsSection } from './components/CertificationsSection';
 import { ProjectsSection } from './components/ProjectsSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -18,6 +19,7 @@ export const App: React.FC = () => {
       <Interactive3DSection />
       <SkillsSection />
       <ExperienceSection />
+      <CertificationsSection />
       <ProjectsSection />
       <ContactSection />
       <Footer />
