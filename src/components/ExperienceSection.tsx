@@ -18,7 +18,7 @@ export const ExperienceSection: React.FC = () => {
   const experiences: Experience[] = [
     {
       title: 'Full Stack Developer & AI Automation Engineer',
-      company: 'Freelance (Collaboration with Hanzla Bin Shakeel)',
+      company: 'Freelance (Collaboration with Senior)',
       location: 'Remote',
       period: 'Apr 2026 - Present',
       description: [
