@@ -65,7 +65,7 @@ export const Footer: React.FC = () => {
           <div className="space-y-4">
             <a href="#home" className="flex items-center gap-2 group">
               <img 
-                src="/logo.png" 
+                src="public\logo.png" 
                 alt="Mona.Dev Logo" 
                 className="h-10 w-auto transform group-hover:scale-105 transition-transform duration-300"
               />
